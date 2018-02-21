@@ -54,14 +54,26 @@ const populateDropdown = function (beers) {
     const beerUl = document.getElementById("beer-info");
     beerUl.innerHTML = "";
     const name = document.createElement('li');
-    name.innerText = `Beer name: ${selectedBeer.name}`
-
+    name.innerText = `Name: ${selectedBeer.name}`
     beerUl.appendChild(name);
+
+    const description = document.createElement('li');
+    description.innerText = `Description: ${selectedBeer.description}`
+    beerUl.appendChild(description);
+
+    const firstBrewed = document.createElement('li');
+    firstBrewed.innerText = `First Brewed: ${selectedBeer.firstBrewed}`
+    beerUl.appendChild(firstBrewed);
+
+    const abv = document.createElement('li');
+    abv.innerText = `Alcohol by Volume: ${selectedBeer.abv}`
+    beerUl.appendChild(abv);
+
     const lineBreak = document.createElement('br');
     beerUl.appendChild(lineBreak);
     const image = document.createElement("img");
 
-    image.height = "200";
+    image.height = "400";
     image.src = selectedBeer.image_url;
 
     beerUl.appendChild(image);
