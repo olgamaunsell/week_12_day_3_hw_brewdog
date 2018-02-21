@@ -62,7 +62,8 @@ const populateDropdown = function (beers) {
     beerUl.appendChild(description);
 
     const firstBrewed = document.createElement('li');
-    firstBrewed.innerText = `First Brewed: ${selectedBeer.firstBrewed}`
+    firstBrewed.innerText = `First Brewed: ${selectedBeer.first_brewed}`
+    console.log("first brewed",selectedBeer.first_brewed);
     beerUl.appendChild(firstBrewed);
 
     const abv = document.createElement('li');
