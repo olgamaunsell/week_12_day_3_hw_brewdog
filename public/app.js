@@ -14,13 +14,13 @@ const requestComplete = function () {
   if(this.status !== 200) return;
   const jsonString = this.responseText;
   const beers = JSON.parse(jsonString);
-  console.log("beers", beers[0]);
+
   // populateList(beers);
   populateDropdown(beers);
 }
 
 const populateList = function (beers) {
-  console.log("beers", beers);
+
   const beerList = document.getElementById("beer-list");
 
   beers.forEach(function (beer) {
@@ -37,7 +37,7 @@ const populateList = function (beers) {
 }
 
 const populateDropdown = function (beers) {
-  console.log(beers);
+
   const dropdown = document.querySelector("select");
 
   beers.forEach(function (beer, index) {
